@@ -22,7 +22,7 @@ public class Test2 {
 //        Collections.sort(employees);
         //или
         //Collections.sort(employees, new ageComparator());
-        Collections.sort(employees, new salaryComparator());
+//        Collections.sort(employees, new salaryComparator());
 
         System.out.println("After : " + employees.toString());
     }
@@ -51,11 +51,11 @@ class Employee implements Comparable<Employee>{
 //            return 1;
 //        }
         //или просто
-        //return this.age-anotherEmp.age;
+        return this.age-anotherEmp.age;
         //а так же
-        //return this.age.compareTo(anotherEmp.age);
+//        return this.age.compareTo(anotherEmp.age);
         // по имени
-        return this.name.compareTo(anotherEmp.name);
+//        return this.name.compareTo(anotherEmp.name);
     }
 
     @Override
@@ -81,20 +81,20 @@ class ageComparator implements Comparator<Employee>{
     }
 }
 
-class salaryComparator implements Comparator<Employee>{
-    @Override
-    public int compare(Employee emp1, Employee emp2) {
-        if (emp1.salary == emp2.salary){
-            return 0;
-        }
-        else if (emp1.salary < emp2.salary){
-            return -1;
-        }
-        else {
-            return 1;
-        }
-    }
-}
+//class salaryComparator implements Comparator<Employee>{
+//    @Override
+//    public int compare(Employee emp1, Employee emp2) {
+//        if (emp1.salary == emp2.salary){
+//            return 0;
+//        }
+//        else if (emp1.salary < emp2.salary){
+//            return -1;
+//        }
+//        else {
+//            return 1;
+//        }
+//    }
+//}
 
 
 

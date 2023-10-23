@@ -1,9 +1,13 @@
-package HashMap;
+package HashMap_AndHashTableTheory;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class HashMapEx1 {
+    //отличие HashMap от HashTable(синхронизирован, поэтому его методы не такие быстрые)
+    //в HashTable ни ключ, ни значение не могут быть null
+    //если нужна поддержка многопоточности лучше использовать ConcurrentHashMap
+
     public static void main(String[] args) {
         HashMap<String,Integer> obshaga1 = new HashMap<>();
         obshaga1.put("Andrew Kondratyev",405);
