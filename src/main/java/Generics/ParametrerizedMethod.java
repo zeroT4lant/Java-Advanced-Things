@@ -19,6 +19,7 @@ public class ParametrerizedMethod {
 class GenMethod{
 
     //ArrayList какого-то типа
+    //и указан тип возвращаемого значения
     public static <T> T getSecondElement(ArrayList<T> al){
         return al.get(1);//возвращает элемент второго индекса
     }

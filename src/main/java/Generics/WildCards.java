@@ -25,10 +25,11 @@ public class WildCards {
         a1.add(new Cat());
         check2(a1);
 
-        List<Double> ald = new ArrayList<>();
+        List<Number> ald = new ArrayList<>();
         ald.add(3.14);
         ald.add(2.12);
         ald.add(23.51);
+        ald.add(2);
         System.out.println(findSum(ald));
     }
 

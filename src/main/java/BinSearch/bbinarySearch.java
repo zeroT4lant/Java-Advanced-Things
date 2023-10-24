@@ -8,9 +8,16 @@ public class bbinarySearch {
         //не отсортирован
         ArrayList<Integer> arrList = new ArrayList<>();
         int[] ints = {4,1,6,2,8,-10,5,192,-100};
-        for (int i = 0;i<ints.length;i++){
+
+        //перебираем все элементы ints
+//        for (int e : ints){
+//            arrList.add(e);
+//        }
+        //или
+        for (int i = 0; i < ints.length; i++) {
             arrList.add(ints[i]);
         }
+
         System.out.println("Before sort: " + arrList);
 
         //сортировка - скорее всего быстрая

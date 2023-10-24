@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//любые типы наследники Participant
 public class Team<T extends Participant> {
     private String name;
+
+    //лист категории команд только того типа, указанного в параметре
     private List<T> participants = new ArrayList<>();
 
     public Team(String name) {

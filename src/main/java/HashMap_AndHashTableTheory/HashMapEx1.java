@@ -9,6 +9,8 @@ public class HashMapEx1 {
     //если нужна поддержка многопоточности лучше использовать ConcurrentHashMap
 
     public static void main(String[] args) {
+
+        //В дженерике задаём типы ключей и значений
         HashMap<String,Integer> obshaga1 = new HashMap<>();
         obshaga1.put("Andrew Kondratyev",405);
         obshaga1.put("Kirik",405);
@@ -19,17 +21,19 @@ public class HashMapEx1 {
         System.out.println(obshaga1.containsKey("Kirik"));
         System.out.println(obshaga1.containsValue(405));
         System.out.println(obshaga1.isEmpty());
-        for (Map.Entry<String,Integer> e : obshaga1.entrySet()) {
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
+        for (Map.Entry<String,Integer> el : obshaga1.entrySet()){
+            System.out.println(el.getKey());
+            System.out.println(el.getValue());
         }
+
 
 
         HashMap<String,Integer> obshaga = new HashMap<>();
         obshaga.put("Botinok",407);
         obshaga.put("I am",407);
         obshaga.put("Maksos",407);
-        //добавь если такого нет, проверка по ключу
+
+        //добавь объект если такого нет, проверка по ключу
         obshaga.putIfAbsent("Maksim",405);
         System.out.println(obshaga);
 

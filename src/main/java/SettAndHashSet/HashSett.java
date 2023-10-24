@@ -5,12 +5,14 @@ import java.util.Set;
 
 public class HashSett {
     public static void main(String[] args) {
+        //в случае чисел отсортирован. Только уникальные значения
         HashSet<Integer> hashset = new HashSet<>();
         hashset.add(12);
         hashset.add(5);
         hashset.add(3);
         hashset.add(2);
         hashset.add(4);
+        System.out.println(hashset);
 
         HashSet<Integer> hashset2 = new HashSet<>();
         hashset2.add(10);

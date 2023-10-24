@@ -11,6 +11,8 @@ public class ArrayListMethods4 {
         StringBuilder sb4 = new StringBuilder("D");
         StringBuilder sb5 = new StringBuilder("E");
         StringBuilder[] array = {sb1,sb2,sb3,sb4,sb5};
+
+        //лист стрингбилдеров
         List<StringBuilder> list = Arrays.asList(array);
         System.out.println(list);
         array[0].append("!!!");

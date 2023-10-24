@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class ArrayListMethods2 {
     public static void main(String[] args) {
+        //создаем объекты типа Student
         Student s1 = new Student("Ivan","m",18,2,3.5);
         Student s2 = new Student("Cheban","m",18,2,3.5);
         Student s3 = new Student("Den","m",18,2,3.5);
         Student s4 = new Student("Buben","m",18,2,3.5);
         Student s5 = new Student("Gosha","m",18,2,3.5);
+        Student s6 = new Student("Maxim","f",19,2,2.2);
+
+        //листа типа Student
         ArrayList<Student> studList = new ArrayList<>();
         studList.add(s1);
         studList.add(s2);

@@ -21,10 +21,12 @@ class Pair<V1,V2> {
         this.value2 = value2;
     }
 
+    //кастомный тип возвращаемого значения
     public V1 getFirstValue(){
         return value1;
     }
 
+    //кастомный тип возвращаемого значения
     public V2 getSecondValue(){
         return value2;
     }

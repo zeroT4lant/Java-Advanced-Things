@@ -11,6 +11,7 @@ public class Itterator {
         arrList1.add("Andrew");
         System.out.println("arrList1 = "+arrList1);
 
+        //указываем в дженерике тип итератора
         Iterator<String> iterator = arrList1.iterator();//делаем arrList1 способным к итератору
         while (iterator.hasNext()){
             System.out.println(iterator.next());

@@ -21,11 +21,16 @@ public class HashCodeEx1 {
 
 
         //!!!- Чтобы нормально поиск работал - реализуй equals и hashCode
-        //true - если реализован метод hashCode
+        //true - если реализован метод hashCode, ищет по значению
+        System.out.println("Поиск по значению при реализации equals и hashCode");
         System.out.println(map.containsKey(s4));//false,так как поиск по хэшу, а не сравнение
-        //System.out.println(s1.equals(s4));//true сравнение по ссылке
 
+        //
+        System.out.println(s1.equals(s4));//true сравнение по значению
+
+        //Сравнение хэшей они одинаковы при реализации HashCode
         System.out.println(s1.hashCode());
+        System.out.println(s4.hashCode());
 
         //в случае если для объектов переопредленны equals и hashCode
         //1) если у двух объектов равны hashCode, то они equals
