@@ -8,8 +8,10 @@ public class LocalInner1 {
 }
 
 class Math{
-    public void getResult(){
 
+    //запихнули класс в метод getResult
+    //и ниже проводим операции, указываем что будет делать метод getResult
+    public void getResult(){
 
 
         class Delenie{
@@ -41,6 +43,7 @@ class Math{
             }
         }
 
+        // проводим операции
         Delenie delenie = new Delenie();
         delenie.setDelimoe(21);
         delenie.setDelitel(4);

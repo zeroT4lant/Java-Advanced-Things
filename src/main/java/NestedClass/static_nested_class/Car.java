@@ -8,6 +8,8 @@ class Test {
         //передаем движок в параметры
         Car c1 = new Car("black",2,e1);
         System.out.println(c1);
+        //или так
+        Car c2 = new Car("White",4,new Car.Engine(245));
     }
 }
 
@@ -17,6 +19,8 @@ public class Car {
     //и наоборот
     String color;
     int doorCount;
+
+    //создаём класс Car ниже
     Engine engine;
 
     public Car(String color, int doorCount, Engine engine) {

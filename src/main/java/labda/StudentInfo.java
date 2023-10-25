@@ -4,15 +4,16 @@ package labda;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class StudentInfo {
 
-
-
     //передаём лист студентов и объект реализующий интерфейс StudentChecks
+    //вторым аргументом объект типа интерфейса Predicate
     void testStudents(ArrayList<Student> al, Predicate<Student> pr){
         for (Student s : al){
+            //если переменная, переданная в аргумент test, проходит проверку, то печатаем число
             if(pr.test(s)){
                 System.out.println(s);
             }
@@ -35,6 +36,7 @@ class Test {
         students.add(st5);
 
         //компоратор вторым параметром
+        //сортировка по условию
 //        Collections.sort(students, (stud1,stud2) -> {return stud1.age - stud2.age;});
 //        System.out.println(students);
 
@@ -54,6 +56,7 @@ class Test {
 //            }
 //        });
 
+        //фильтрация по условию
         //теперь вторым параметром ждёT Predicate
         info.testStudents(students, s -> s.avgGrade<5);
         System.out.println("----");
@@ -66,6 +69,9 @@ class Test {
         Predicate<Student> p2 = student -> student.sex == 'm';
         //проверка двух условий
         info.testStudents(students,p2.and(p1));
+
+        Function<Student,Double> f = student -> 3.14;
+
     }
 }
 
