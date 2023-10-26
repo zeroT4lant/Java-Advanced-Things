@@ -21,13 +21,13 @@ public class Test6 {
         Stream<Integer> stream6 = Stream.of(1,2,3,4,5,1,2,3);
         stream6.distinct().forEach(System.out::println);
 
-        //стримы нельзя переиспользовать
+        //стримы нельзя переиспользовать после результирующего метода
 //        System.out.println(stream6.count());
         System.out.println("count");
         Stream<Integer> stream7 = Stream.of(1,2,3,4,5,1,2,3);
         System.out.println(stream7.count());
 
-        //результирующий метод peek
+        //промежуточный метод peek
         //помогает не выходя из цепи посмотреть результат работы методов цепи на разных этапах
         System.out.println("peek");
         Stream<Integer> stream8 = Stream.of(1,2,3,4,5,1,2,3);

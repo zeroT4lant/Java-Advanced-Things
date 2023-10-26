@@ -12,6 +12,8 @@ public class Test3_forEach {
 //        //
 //        Arrays.stream(arr).forEach(System.out::println);
 
+
+        //принимает функцию - консумер, в которую нужно передать параметр
         //---каждый элемент потока помести в myMethod в качестве параметра
         //который находится в классе Utils
         //Arrays.stream(arr).forEach(Utils::myMethod);

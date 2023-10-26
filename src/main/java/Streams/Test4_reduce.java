@@ -15,6 +15,7 @@ public class Test4_reduce {
 
         //reduce - возвращает optional
         //с методом get возвращает конечное значение аккумулятора (120)
+        // с идентификатором get не нужен))))
         int res = list.stream().reduce((acc,el) -> acc * el).get();
 //        System.out.println(res);
         //5, 4, 2, 1, 3
@@ -43,7 +44,10 @@ public class Test4_reduce {
         list3.add("gema");
         list3.add("body");
 
-        String stringList = list3.stream().reduce("",(a,e) -> a + " " + e);
+        String stringList = list3.stream().reduce("",(a,e) -> a + "" + e);
+        //или
+        //String stringList = list3.stream().reduce((acc,el) -> acc + "" + el).get();
+
         System.out.println(stringList);
 
 

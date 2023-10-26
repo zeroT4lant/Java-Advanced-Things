@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class Test5 {
     public static void main(String[] args) {
         int[] arr = {5,4,2,6,8,11,5,44};
+        //сортировка по умолчанию, есть возможность принимать компоратор для указания как будем сортировать
 //        arr = Arrays.stream(arr).sorted().toArray();
 //        System.out.println(Arrays.toString(arr));
         int res = Arrays.stream(arr).filter(e -> e % 2 == 1)

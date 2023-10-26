@@ -32,7 +32,7 @@ public class RemoveIf {
 
         System.out.println("New test");
         arr1.removeIf(i -> i > 3);
-        System.out.println(arr1);//отсортировали
+        System.out.println(arr1);//отфильтровали
 
         //reverse
         //вторым параметром компаратор, передаём его лямбдой

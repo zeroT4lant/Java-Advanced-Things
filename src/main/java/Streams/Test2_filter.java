@@ -20,8 +20,12 @@ public class Test2_filter {
         students.add(st5);
         System.out.println(students);
 
+        //Predicate - для фильтрации
+        //Comparator - для сравнения
+
         //filter принимает Predicate
         //привели тип List к ArrayList
+        //так же фильтрует элементы, делает подборку, но наверное не меняет
         var students2 = (ArrayList<Student>) students.stream().filter(e
                 -> e.getAge() > 22 && e.getAvgGrade() > 5)
                 .collect(Collectors.toList());
