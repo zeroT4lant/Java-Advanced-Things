@@ -21,8 +21,10 @@ class Market{
 
     //можно для всего метода написать synchronized
     public synchronized void getBread() {
+            //если хлеба нет, то запускается wait
             while (breadCount < 1) {
                 try {
+                    //wait освобождает монитор
                     wait();//может принимать миллисекунды
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
@@ -38,6 +40,7 @@ class Market{
     public synchronized void putBread() {
             while (breadCount >= 5) {
                 try {
+                    //wait освобождает монитор
                     wait();
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
@@ -46,6 +49,7 @@ class Market{
             breadCount++;
             System.out.println("Добавили один хлеб");
             System.out.println("Количество хлеба = " + breadCount);
+            //будит поток
             notify();
     }
 }
