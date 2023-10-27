@@ -1,6 +1,8 @@
 package Multithreading;
 
 public class Ex1 {
+
+    //Создать поток можно, создав объект класса, расширяющего(extends) класс Thread, и который переписывает его метод run
     public static void main(String[] args) {
         MyThread1 tr1 = new MyThread1();
         MyThread2 tr2 = new MyThread2();

@@ -6,7 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class LockExample {
     //lock и синхронайзт(открывает и закрывает потоки автоматически) аналогичны
     public static void main(String[] args) {
+        //у него вызывать будем
         Call call = new Call();
+
+        //создаём потоки
+        //передаём объект new Runnable() в аргумент треда
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -25,6 +29,7 @@ public class LockExample {
                 call.whatsAppCall();
             }
         });
+        //вызываем
         thread1.start();
         thread2.start();
         thread3.start();

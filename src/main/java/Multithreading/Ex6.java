@@ -1,6 +1,7 @@
 package Multithreading;
 
 public class Ex6 implements Runnable {
+    //main - тоже поток
     public void run() {
         System.out.println("Method run. Method name = " + Thread.currentThread().getName());
     }

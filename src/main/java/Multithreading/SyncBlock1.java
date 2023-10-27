@@ -2,6 +2,7 @@ package Multithreading;
 
 public class SyncBlock1 {
     public static void main(String[] args) {
+        //Сразу создали объект имплементирующий Runnable
         MyRunnableImpl_2 runnable = new MyRunnableImpl_2();
         Thread thread1 = new Thread(runnable);
         Thread thread2 = new Thread(runnable);
@@ -17,7 +18,6 @@ public class SyncBlock1 {
 class Counter2{
     //статичную переменную можно использовать и изменять из других мест программы
     static int count = 0;
-
 }
 
 class MyRunnableImpl_2 implements Runnable{
@@ -26,7 +26,7 @@ class MyRunnableImpl_2 implements Runnable{
         System.out.println("ura!!!");
     }
 
-    //если поставить synchronized, то числа выводят очередность в правильном порядке
+    //если поставить synchronized, то числа организованно выводят очередность в правильном порядке
     private void doWork1(){
         //не синхронизированн, выполняется рандомно
         doWork2();

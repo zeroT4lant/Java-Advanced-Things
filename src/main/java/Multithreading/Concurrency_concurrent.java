@@ -19,5 +19,4 @@ public class Concurrency_concurrent {
     //достигается за счёт параллеизма
 
 
-
 }

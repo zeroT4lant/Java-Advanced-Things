@@ -13,6 +13,7 @@ public class SyncBlock2 {//Data Race - проблема, когда 2 и бол�
     }
 
     public static void main(String[] args) throws InterruptedException {
+
         Thread thread1 = new Thread(new R2());
         Thread thread2 = new Thread(new R2());
         thread1.start();
